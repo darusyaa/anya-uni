@@ -29,20 +29,20 @@
       color: $accent-color;
     }
 
-    @media screen and(max-width:374px) {
+    @media screen and(max-width: 374px) {
       @include fontPreset(700, 28px, 36px, 0.05em);
     }
 
-    @media screen and(min-width:381px) {
+    @media screen and(min-width: 381px) {
         top: 1063px;
       }
 
-    @media screen and(min-width:768px) {
+    @media screen and(min-width: 768px) {
         @include fontPreset(700, 34px, 36px, 0.05em);
         top: 879px;
       }
 
-      @media screen and(min-width:768px) {
+      @media screen and(min-width: 1200px) {
         @include fontPreset(700, 38px, 40px, 0.05em);
         top: 1072px;
       }

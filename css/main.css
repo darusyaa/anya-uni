@@ -1133,7 +1133,7 @@ a {
     top: 879px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .whats-happening__title {
     font-weight: 700;
     font-size: 38px;
