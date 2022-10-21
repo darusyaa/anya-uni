@@ -1,0 +1,21 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./utils/breakpoints";
+
+@import "./base/common";
+@import "./base/reset";
+
+@import "./components/backdrop";
+@import "./components/modal-window";
+@import "./components/modal-form";
+
+@import "./layouts/common/";
+@import "./layouts/index";
+@import "./layouts/mobile/index";
+@import "./layouts/catalog/index";
+
+
+
+
+

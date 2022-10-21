@@ -1,0 +1,336 @@
+.header {
+  background-color: $white-color;
+  border-bottom: 1px solid $border-color;
+
+  height: 60px;
+  display: flex;
+
+  &-container {
+    @include centeredFlex($justify: space-between);
+    @include container();
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 80px;
+  }
+}
+
+.site-nav {
+  &__logo {
+    @include logo();
+
+    color: $accent-color;
+    &::before {
+      content: "Bl";
+      color: black;
+    }
+    &::after {
+      content: "d";
+      color: black;
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+}
+
+.contact {
+  display: none;
+}
+
+.header-enroll {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  // .dropdown {
+  //   float: left;
+  //   overflow: hidden;
+
+  //   &__button {
+  //     @include buttonSet(block, null, null, null, null, null, null);
+
+  //     padding-right: 0;
+  //     padding-left: 0;
+
+  //     border: none;
+
+  //     overflow: hidden;
+  //     background: transparent;
+
+  //     padding-right: 20px;
+  //   }
+
+  //   &__icon {
+  //     fill: currentColor;
+
+  //     position: absolute;
+  //     top: 20px;
+
+  //     // width: 30px;
+  //     // height: 15px;
+  //   }
+
+  //   &__content {
+  //     display: none;
+  //     position: absolute;
+  //     background-color: $white-color;
+  //     min-width: 133px;
+  //     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  //     z-index: 1;
+  //     opacity: 0.9;
+  //   }
+
+  //   &__item {
+  //     &:hover,
+  //     &:focus {
+  //       background-color: $work-overlay;
+  //     }
+
+  //     &:hover .dropdown__link,
+  //     &:focus .dropdown__link {
+  //       color: $white-color;
+  //     }
+  //   }
+
+  //   &__link {
+  //     @include fontPreset(400px, 14px, 18px, 00.05em);
+  //     color: black;
+  //     float: none;
+  //     padding: 12px 16px;
+  //     text-decoration: none;
+  //     display: block;
+  //     text-align: left;
+  //   }
+
+  //   &:hover &__content {
+  //     display: block;
+  //   }
+  // }
+
+  .site-nav {
+    &__logo {
+    }
+  }
+
+  // .contact {
+  //   display: block;
+  // }
+
+  // .header-contact {
+  //   &__link {
+  //     @include fontPreset(500, 12px, 14px, 00.02em);
+  //     @include transitionBase();
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 10px;
+  //     color: $title-text-color;
+  //     &:hover,
+  //     &:focus {
+  //       color: $accent-color;
+  //     }
+  //   }
+
+  //   &__icon {
+  //     fill: currentColor;
+  //   }
+  // }
+
+  .header-enroll {
+    display: block;
+
+    &__link {
+    }
+
+    &__button {
+      @include transitionBack(color, border);
+      @include buttonSet(
+        block,
+        150px,
+        40px,
+        8px,
+        8px,
+        transparent,
+        $accent-color
+      );
+      border-radius: 0;
+      border: 1px solid $accent-color;
+      &:hover,
+      &:focus {
+        border: 1px solid black;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      @include fontPreset(700, 26px, 31px, 0.03em);
+      @include logo();
+
+      margin-left: 62px;
+
+      color: $accent-color;
+      &::before {
+        content: "Bl";
+        color: black;
+      }
+      &::after {
+        content: "d";
+        color: black;
+      }
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &__link {
+      @include fontPreset(500, 14px, 16px, 0.02em);
+      @include transitionBase();
+
+      position: relative;
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      color: black;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+
+      &--current {
+        color: $accent-color;
+
+        // &::after {
+        //   position: absolute;
+        //   display: block;
+        //   content: "";
+        //   width: 100%;
+        //   height: 4px;
+        //   background-color: $accent-color;
+        //   border-radius: 2px;
+        //   bottom: 0%;
+        //   margin-bottom: -1px;
+        // }
+      }
+    }
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+
+    &__button {
+      @include buttonSet(block, null, null, null, null, null, null);
+
+      padding-right: 0;
+      padding-left: 0;
+
+      border: none;
+
+      overflow: hidden;
+      background: transparent;
+
+      padding-right: 20px;
+    }
+
+    &__icon {
+      fill: currentColor;
+
+      position: absolute;
+      top: 30px;
+
+      // width: 30px;
+      // height: 15px;
+    }
+
+    &__content {
+      display: none;
+      position: absolute;
+      background-color: $white-color;
+      min-width: 133px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      opacity: 0.9;
+    }
+
+    &__item {
+      &:hover,
+      &:focus {
+        background-color: $work-overlay;
+      }
+
+      &:hover .dropdown__link,
+      &:focus .dropdown__link {
+        color: $white-color;
+      }
+    }
+
+    &__link {
+      @include fontPreset(400px, 14px, 18px, 00.05em);
+      color: black;
+      float: none;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    &:hover &__content {
+      display: block;
+    }
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .header-contact {
+    &__list {
+      display: flex;
+    }
+
+    &__link {
+      @include fontPreset(500, 14px, 16px, 00.02em);
+      @include transitionBase();
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $title-text-color;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+
+    &__icon {
+      fill: currentColor;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .header-enroll {
+    display: block;
+    &__button {
+      min-width: 160px;
+    }
+  }
+}

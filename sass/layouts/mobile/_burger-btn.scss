@@ -1,0 +1,71 @@
+.burger__btn {
+    @include transitionThree(fill, stroke, color);
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: black;
+
+    &--opened {
+        @include centeredFlex();
+
+        top: 10px;
+        right: 15px;
+
+        margin-left: auto;
+        margin-right: 60px;
+
+        &:hover .burger__icon,
+        &:focus .burger__icon {
+          stroke: $accent-color;
+        }
+
+        @media screen and(max-width: 767px) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    &.is-open .burger__icon-opened {
+        display: none;
+    }
+
+    &.is-open .burger__icon-crossed {
+        display: block;
+    }
+
+    &--closed {
+        @include centeredFlex();
+        position: absolute;
+        top: 10px;
+        right: 15px;
+
+        height: 40px;
+        width: 40px;
+
+        &:hover .burger__icon,
+        &:focus .burger__icon {
+          fill: $accent-color;
+        }
+    }
+
+
+
+    @media screen and (min-width: 1200px) {
+    display: none;
+    }
+}
+
+.burger__icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+
+    &--opened {
+        stroke: #0F303F;
+        width: 30px;
+    }
+}
+
+
+

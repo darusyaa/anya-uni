@@ -1,0 +1,71 @@
+.hero-catalog {
+
+    padding: 118px 0;
+
+    background-color: $hero-bg-color;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    max-width: 100%;
+
+    background-color: $hero-bg-color;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/catalog/hero.jpg);
+
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/catalog/hero.jpg);
+      max-width: 1600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    &__container {
+        @include container();
+    }
+
+    &__title {
+        @include fontPreset(900, 26px, 42px, 0.06em); 
+        max-width: 360px;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;   
+
+        text-transform: uppercase;
+        text-align: center;   
+        color: $white-color;  
+
+
+        @media screen and (min-width: 1200px) {
+            max-width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+      }
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__button {
+        @include transitionBack(background-color, color);
+        @include buttonSet(inline-block, 200px, 50px, 10px, 32px, $primary-text-color, $hero-color);
+
+        @include fontPreset(700, 16px, 30px, 0.06em);
+
+        border: none;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+        &:focus, &:hover {
+          background-color: $accent-color;
+          color: $white-color;
+        }
+    }
+}
+

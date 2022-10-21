@@ -1,0 +1,202 @@
+.catalog-container {
+    @include container();
+
+}
+
+.catalog {
+    &__title {
+        @extend %hidden;
+    }
+}
+
+.filtration {
+    &__list {
+        @include centeredFlex();
+
+        margin: 0 auto;
+        margin-bottom: 50px;
+
+        flex-wrap: wrap;
+        row-gap: 15px;
+        column-gap: 8px;
+
+        @media screen and (max-width: 768px) {
+            justify-content:flex-start;
+          }
+    }
+
+    &__button {
+        @extend %button;
+        @include transitionThree();
+        @include fontPreset(500, 16px,26px, 0.03em);
+        @include buttonSet(block, 100%, 100%, 6px, 22px, $primary-text-color, $hero-color);
+    
+        &:hover, &:focus {
+            background-color: $accent-color;
+            color: $white-color;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+        &.active {
+            background-color: $accent-color;
+            color: $white-color;
+        }
+    }
+}
+
+.catalog-list__container {
+    overflow: hidden;
+}
+
+.catalog-overlay {
+    &__list {
+        @include flexWrap();
+    }
+
+    &__item {
+        display: none;
+    
+        &.show {
+            display: block;
+        }
+    }
+
+    &__link {
+        @include transitionBase(box-shadow);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px 0px 4px 4px;
+
+        background: $white-color;
+        border: 1px solid $cards-color;
+
+        max-height: 450px;
+
+        @media screen and(min-width: 768px) {
+            max-width: 354px;
+        }
+
+        @media screen and(min-width: 1200px) {
+            max-width: 370px;
+        }
+
+        &:hover, &:focus {
+            box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
+        }
+    }
+}
+
+.product-description {
+    position: relative;
+    overflow: hidden;
+}
+
+.catalog-overlay__description {
+    @include transitionBase(transform);
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background-color: $work-overlay;
+
+    z-index: 10;
+    // opacity: 1;
+    transform: translateY(101%);
+
+    .catalog-overlay__item:hover &, .catalog-overlay__item:focus & {
+        transform: translateY(0);
+    }
+}
+
+.catalog-overlay__text {
+    padding: 20px 15px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: $white-color;
+
+    display: block;
+
+    @media screen and (min-width: 480px){
+        font-size: 18px;
+        line-height: 1.56;
+        padding: 77px 24px;
+    }
+
+    @media screen and (min-width: 768px){
+        padding-top: 49px;
+        padding-bottom: 77px;
+    }
+    @media screen and (min-width: 1200px){
+        padding-top: 63px;
+        padding-bottom: 63px;
+    }
+}
+
+.catalog-cards {
+    padding: 20px 24px;
+
+    flex-grow: 1;
+
+    position: relative;
+
+    &__title {
+        @include fontPreset(700, 18px, 36px, 0.06em);
+        margin-bottom: 4px;
+
+        color: $title-text-color;
+
+        @media screen and (min-width: 768px) and (max-width:1199px){
+            max-width: 304px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.88;
+        color: $primary-text-color;
+    }
+
+    &__button {
+        @include buttonSet(block, 30px, 30px, 8px, 8px, $border-form-color, null);
+
+        border: none;
+
+        overflow: hidden;
+        // background: transparent;
+
+        position: absolute;
+
+        bottom: 20px;
+        right: 10px;
+
+        &:hover &::before, &:focus &::before {
+            fill: $accent-color;
+        }
+
+        &:hover, &:focus {
+            fill: $accent-color;
+            background-color: $work-overlay;
+        }
+
+        &::before {
+            content: "";
+            background-image: url(../images/icons/catalog/cart.svg);
+
+            display: inline-block;
+
+            width: 35px;
+            height: 35px;
+            fill: $title-text-color;
+
+            &:hover, &:focus {
+                fill: $accent-color;
+            }
+          }
+    }
+}
+
