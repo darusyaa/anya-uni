@@ -1,159 +1,207 @@
 .hero {
-    padding: 300px 0;
-    background-color: $hero-bg-color;
-    
-    margin: 0 auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    background-color: $hero-bg-color;
+  // padding: 370px 0;
+  padding-top: 200px;
+  padding-bottom: 270px;
+  background-color: $hero-bg-color;
 
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  text-align: center;
+  background-color: $hero-bg-color;
 
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/index/hero/hero-index.jpg);
+  background-image: url(../images/index/hero/hero-320.jpg);
 
-    @media screen and(max-width: 479px) {
-        padding: 160px 0;
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: url(../images/index/hero/hero-320@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/index/hero/hero-768.jpg);
+    padding-top: 300px;
+    padding-bottom: 700px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url(../images/index/hero/hero-768@2x.jpg);
+    padding-top: 300px;
+    padding-bottom: 700px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/index/hero/hero-1200.jpg);
+    max-width: 1568px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url(../images/index/hero/hero-1200@2x.jpg);
+    max-width: 1568px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+
+  &__container {
+    @include container();
+    // padding-left: 5px;
+    // padding-right: 5px;
+  }
+
+  &__title {
+    @include fontPreset(700, 34px, 36px, 0.05em);
+
+    font-family: Ubuntu;
+    margin-bottom: 25px;
+    // margin-left: auto;
+    // margin-right: auto;
+    text-transform: uppercase;
+    text-align: left;
+
+    color: black;
+
+    // @media screen and(max-width: 1199px) {
+    //
+
+    @media screen and(max-width: 359px) {
+      @include fontPreset(700, 28px, 30px, 0.05em);
     }
 
-    @media screen and(max-width: 767px) {
-        padding: 210px 0;
+    @media screen and(min-width: 768px) and(max-width:1199px) {
+      @include fontPreset(700, 40px, 42px, 0.05em);
+      max-width: 700px;
+    }
+  }
+
+  &__text {
+    @include fontPreset(700, 20px, 26px, 0.05em);
+
+    color: #212529;
+    margin-bottom: 85px;
+    text-align: left;
+  }
+
+  &__list {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+
+    @media screen and(min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__button {
+    @include buttonSet(
+      inline-block,
+      290px,
+      50px,
+      10px,
+      32px,
+      $accent-color,
+      $white-color
+    );
+    @include fontPreset(700, 16px, 30px, 0.06em);
+    @include transitionBack(background-color, color);
+
+    border: 2px solid $accent-color;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      color: $accent-color;
+      border: 2px solid $accent-color;
     }
 
-    @media screen and(max-width: 1199px) {
-        padding: 220px 0;
-    }
+    &-2 {
+      background-color: transparent;
+      color: $accent-color;
 
-    &__container {
-        @include container();
-    }
-
-    &__title {
-        @include fontPreset(700, 40px, 58px, 0.05em);
-
-        margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        text-transform: uppercase;
-        text-align: center;
-
+      &:focus,
+      &:hover {
+        background-color: $accent-color;
         color: $white-color;
-
-        @media screen and(max-width: 1199px) {
-            max-width: 480px;
-        }
+      }
     }
 
-    &__text {
-        @include fontPreset(700, 20px, 26px, 0.05em);
-
-        color: $white-color;
-        margin-bottom: 30px;
-
-        &-span {
-            color: $accent-color;
-        }
+    @media screen and(max-width: 425px) {
+      padding: 10px 10px;
+    //   min-width: 140px;
+    //   max-width: 160px;
     }
-
-    &__list {
-        display: flex;
-        gap: 10px;
-    }
-
-    &__item {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &__button {
-        @include buttonSet(inline-block, 200px, 50px, 10px, 32px, $accent-color, $white-color);
-        @include fontPreset(700, 16px, 30px, 0.06em);
-        @include transitionBack(background-color, color);
-
-
-        border: none;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-
-        &:focus, &:hover {
-          background-color: $primary-text-color;
-          color: $hero-color;
-        }
-
-        &-shoes {
-            background-color: $primary-text-color;
-            color: $hero-color;
-
-            &:focus, &:hover {
-                background-color: $accent-color;
-                color: $white-color;
-              }
-        }
-
-        @media screen and(max-width: 425px) {
-            padding: 10px 10px;
-            min-width: 140px;
-            max-width: 160px;
-        }
-    }
+  }
 }
 
 @media screen and(min-width: 768px) {
-    .hero {
-        &__title {
-            @include fontPreset(700, 45px, 60px, 0.05em);
-        }
+  .hero {
+    // &__title {
+    //   @include fontPreset(700, 45px, 60px, 0.05em);
+    // }
 
-        &__list {
-            gap: 40px;
-            justify-content: center;
-        }
-    
-        &__item {
-            margin-left: 0;
-            margin-right: 0;
-        }
+    &__list {
+      gap: 40px;
+      justify-content: center;
     }
+
+    &__item {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 @media screen and(min-width: 1200px) {
-    .hero {
-        position: relative;
+  .hero {
+    position: relative;
 
-        &__title {
-            @include fontPreset(700, 48px, 63px, 0.05em);
-            position: absolute;
-    
-            bottom: 180px;
-            left: 40px;
-    
-            color: $white-color;
-        }
+    &__title {
+      @include fontPreset(700, 48px, 63px, 0.05em);
+      //   position: absolute;
 
-        &__text {
-            @include fontPreset(700, 25px, 30px, 0.05em);
-    
-            position: absolute;
-    
-            bottom: 140px;
-            left: 40px;
-    
-            color: $white-color;
-    
-            &-span {
-                color: $accent-color;
-            }
-        }
-    
-        &__list {
-            display: flex;
-            gap: 20px;
-            position: absolute;
-    
-            bottom: 95px;
-            left: 40px;
-        }
+      //   bottom: 180px;
+      //   left: 40px;
+
+      //   color: $white-color;
     }
 
-    
+    &__text {
+      @include fontPreset(700, 25px, 30px, 0.05em);
+
+      max-width: 900px;
+      margin-bottom: 0;
+
+      //   position: absolute;
+
+      //   bottom: 140px;
+      //   left: 40px;
+
+      //   color: $white-color;
+
+      //   &-span {
+      //     color: $accent-color;
+      //   }
+    }
+
+    &__list {
+      display: flex;
+      gap: 20px;
+      position: absolute;
+
+      bottom: 95px;
+      left: 40px;
+    }
+  }
 }

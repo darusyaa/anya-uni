@@ -30,7 +30,7 @@
   height: 100%;
 
   position: relative;
-  padding-left: 40px;
+  // padding-left: 40px;
   padding-bottom: 48px;
   padding-top: 100px;
 
@@ -77,6 +77,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   &__button {
     @include buttonSet(block, null, null, null, null, null, null);
@@ -135,6 +137,10 @@
     position: relative;
     top: 0;
     left: 0;
+
+    @media screen and (min-width: 480px) {
+      width: 300px;
+    }
   }
 
   &__item {
@@ -164,10 +170,50 @@
   // }
 }
 
+.mobile-enroll {
+  margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  &__link {
+  @include fontPreset(400, 24px, 30px, 00.03em)
+  }
+
+  &__button {
+    @include transitionBack(color, border);
+    @include buttonSet(
+      block,
+      200px,
+      40px,
+      8px,
+      8px,
+      transparent,
+      $accent-color
+    );
+    border-radius: 0;
+    border: 1px solid $accent-color;
+    &:hover,
+    &:focus {
+      border: 1px solid black;
+      color: black;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+
 .mobile-contact {
   &__list {
     margin-top: auto;
     margin-bottom: 64px;
+
+    @media screen and(max-width: 479px) {
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
   }
 
   &__item {
@@ -220,12 +266,12 @@
 
     color: $accent-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
       display: none;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 }
