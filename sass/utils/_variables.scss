@@ -1,31 +1,29 @@
 // color vars
-$primary-text-color: #808080; 
+$primary-text-color: #808080;
 $title-text-color: black;
-$accent-color: #EE1C1F;
-$hero-color: #CEC6C4;
-$white-color: #FFFFFF;
+$accent-color: #ee1c1f;
+$hero-color: #cec6c4;
+$white-color: #ffffff;
+$primary-bg-color: #f1f1fb;
+$bg-opacity: rgba(241, 241, 251, 0.8);
+
 $work-overlay: rgba(230, 73, 38, 0.9);
-$nature-text:#EAE9E8;
-
-
-
-$primary-bg-color: #F5F5F5;
-$secondary-bg-color: #F5F4FA;
+$nature-text: #eae9e8;
+$secondary-bg-color: #f5f4fa;
 $black-color: #000000;
-$hero-bg-color: #2F303A;
-$address-color:  rgba(255, 255, 255, 0.6);
-$border-color: #ECECEC;
-$cards-color: #EEEEEE;
+$hero-bg-color: #2f303a;
+$address-color: rgba(255, 255, 255, 0.6);
+$border-color: #ececec;
+$cards-color: #eeeeee;
 $social-color: #afb1b8;
-$clients-border: #AFB1B8;
+$clients-border: #afb1b8;
 $footer-social-bg: rgba(255, 255, 255, 0.1);
 $border-form-color: rgba(255, 255, 255, 0.3);
-$hero-button:#188CE8;
-
+$hero-button: #188ce8;
 
 // cubic vars
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 @function lineHeight($font-size, $line-height) {
-    @return calc($line-height / $font-size);
-  }
+  @return calc($line-height / $font-size);
+}
