@@ -7,7 +7,7 @@
   border-width: 0;
 }
 
-.catalog__title, .footer__title {
+.catalog__title, .whats-happening__hidden, .footer__title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1063,7 +1063,12 @@ a {
   }
 }
 .whats-happening {
-  background-color: #C9CFD6;
+  background-color: #c9cfd6;
+}
+@media screen and (max-width: 767px) {
+  .whats-happening {
+    display: none;
+  }
 }
 .whats-happening__container {
   padding: 0 15px;
@@ -1143,6 +1148,232 @@ a {
   }
 }
 
+.info {
+  font-family: PT Serif;
+  display: block;
+  position: relative;
+}
+.info__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: #ee1c1f;
+}
+.info__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: 0.02em;
+  color: black;
+}
+.info__procedure {
+  display: block;
+  position: absolute;
+  width: 270px;
+  text-align: left;
+  top: 2.5%;
+  left: 23%;
+}
+.info__analysis {
+  display: block;
+  position: absolute;
+  width: 220px;
+  text-align: left;
+  top: 11.75%;
+  left: 66.5%;
+}
+.info__components {
+  display: block;
+  position: absolute;
+  width: 220px;
+  text-align: left;
+  top: 19.1%;
+  left: 19%;
+}
+.info__components-list {
+  margin-left: 27px;
+}
+.info__components-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1111111111;
+  letter-spacing: 0.02em;
+  color: black;
+  background-image: url(../../../images/icons/li-bulletin.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 12px;
+  padding-left: 17px;
+}
+.info__storage {
+  display: block;
+  position: absolute;
+  width: 270px;
+  text-align: left;
+  top: 25.5%;
+  left: 63%;
+}
+.info__hospital {
+  display: block;
+  position: absolute;
+  width: 210px;
+  text-align: left;
+  top: 32%;
+  left: 17%;
+}
+.info__usage {
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 39%;
+  display: flex;
+  justify-content: center;
+  left: -47%;
+  transform: translate(50%, 50%);
+}
+.info__usage-title {
+  display: inline-block;
+  text-align: center;
+  border: 4px solid #313d49;
+  background-color: #ffffff;
+  width: 460px;
+  padding: 40px 20px;
+}
+.info__pregnant {
+  display: block;
+  position: absolute;
+  width: 190px;
+  text-align: left;
+  top: 58%;
+  left: 23.5%;
+}
+.info__military {
+  display: block;
+  position: absolute;
+  width: 160px;
+  text-align: left;
+  top: 66%;
+  left: 60%;
+}
+.info__accident {
+  display: block;
+  position: absolute;
+  width: 160px;
+  text-align: left;
+  top: 73.6%;
+  left: 30%;
+}
+.info__operation {
+  display: block;
+  position: absolute;
+  width: 140px;
+  text-align: left;
+  top: 75.4%;
+  left: 59%;
+}
+.info__cancer {
+  display: block;
+  position: absolute;
+  width: 170px;
+  text-align: left;
+  top: 89%;
+  left: 25%;
+}
+.info__scorch {
+  display: block;
+  position: absolute;
+  width: 170px;
+  text-align: left;
+  top: 92%;
+  left: 61%;
+}
+.info__important {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #ee1c1f;
+  position: absolute;
+  top: 99%;
+  width: 100%;
+  display: flex;
+  left: 26%;
+}
+
+@media screen and (min-width: 1200px) {
+  .info__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.0833333333;
+    letter-spacing: 0.02em;
+  }
+  .info__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+  .info__procedure {
+    top: 3%;
+    left: 24%;
+  }
+  .info__analysis {
+    width: 270px;
+    top: 12.1%;
+    left: 66.5%;
+  }
+  .info__components {
+    width: 250px;
+    top: 20%;
+    left: 27.5%;
+  }
+  .info__storage {
+    width: 270px;
+    top: 26%;
+  }
+  .info__hospital {
+    width: 260px;
+    left: 24.5%;
+    top: 32.4%;
+  }
+  .info__usage {
+    top: 40%;
+  }
+  .info__pregnant {
+    width: 250px;
+    top: 59%;
+    left: 25%;
+  }
+  .info__military {
+    width: 220px;
+    top: 67%;
+  }
+  .info__accident {
+    width: 220px;
+    top: 74%;
+  }
+  .info__operation {
+    width: 220px;
+    top: 77%;
+  }
+  .info__cancer {
+    width: 220px;
+    top: 89%;
+  }
+  .info__scorch {
+    width: 220px;
+    top: 92%;
+  }
+  .info__important {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    top: 98.7%;
+    left: 32%;
+  }
+}
 .nature {
   background-color: black;
 }
