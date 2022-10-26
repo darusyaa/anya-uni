@@ -1,19 +1,21 @@
 .modal-form {
-    
+    font-family: PT Sans;
+    color: $black-color;
+
+
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 28px;
+    // padding: 28px;
     display: flex;
   
     @media screen and (min-width: 450px) {
-      width: 450px;
-      padding: 40px;
+      width: 100%;
     }
 
-    @media screen and (min-width: 1200px){
-      width: 528px;
-      padding: 40px;
-    }
+    // @media screen and (min-width: 1200px){
+    //   width: 528px;
+    // }
 }
 
 .form-field {
@@ -23,6 +25,8 @@
     margin-bottom: 10px;
 
     position: relative;
+
+    width: 100%;
 
     &--comm {
         margin-bottom: 20px;

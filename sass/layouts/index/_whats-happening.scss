@@ -137,12 +137,12 @@
   &__usage {
     display: block;
     position: absolute;
-    width: 100%;
+    width: 70%;
     text-align: center;
     top: 39%;
     display: flex;
     justify-content: center;
-    left: -47%;
+    left: -16%;
     transform: translate(50%, 50%);
 
     &-title {
@@ -231,7 +231,6 @@
     position: absolute;
     top: 99%;
 
-    width: 100%;
     display: flex;
     left: 26%;
   }

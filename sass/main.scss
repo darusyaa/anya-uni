@@ -1,7 +1,4 @@
-@import "./utils/variables";
-@import "./utils/placeholders";
-@import "./utils/mixins";
-@import "./utils/breakpoints";
+@import "./utils/module";
 
 @import "./base/common";
 @import "./base/reset";
@@ -14,8 +11,3 @@
 @import "./layouts/index";
 @import "./layouts/mobile/index";
 @import "./layouts/catalog/index";
-
-
-
-
-

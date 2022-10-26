@@ -40,7 +40,7 @@
               <!-- <a href="./catalog.html" class="site-nav__link">Catalog</a> -->
               <div class="dropdown">
                 <button class="dropdown__button site-nav__link">
-                  Здати кров для:
+                  Cтати:
                   <svg class="dropdown__icon" width="20" height="20">
                     <use
                       href="./images/icons/header/scroll.svg#scroll-down"
@@ -51,12 +51,12 @@
                   <ul class="dropdown__list">
                     <li class="dropdown__item">
                       <a class="dropdown__link" href="./catalog-clothes.html"
-                        >Військових</a
+                        >Волонтером</a
                       >
                     </li>
                     <li class="dropdown__item">
                       <a class="dropdown__link" href="./catalog-shoes.html"
-                        >Хворих</a
+                        >Донором</a
                       >
                     </li>
                   </ul>
@@ -113,7 +113,9 @@
         <!-- Header-enroll -->
         <div class="header-enroll">
           <a class="header-enroll__link" href="">
-            <button class="header-enroll__button">Записатися</button>
+            <button class="header-enroll__button" data-modal-consult-open>
+              Консультація
+            </button>
           </a>
         </div>
 
@@ -151,7 +153,7 @@
                   <button
                     class="dropdown-mobile__button mobile-nav__link dropdown-btn"
                   >
-                    Здати кров для:
+                    Стати:
                     <svg class="dropdown-mobile__icon" width="20" height="20">
                       <use
                         href="./images/icons/header/scroll.svg#scroll-down"
@@ -164,14 +166,14 @@
                         <a
                           class="dropdown-mobile__link"
                           href="./catalog-clothes.html"
-                          >Військових</a
+                          >Волонтером</a
                         >
                       </li>
                       <li class="dropdown-mobile__item">
                         <a
                           class="dropdown-mobile__link"
                           href="./catalog-shoes.html"
-                          >Хворих</a
+                          >Донором</a
                         >
                       </li>
                     </ul>
@@ -187,7 +189,9 @@
             <!-- mobile-enroll -->
             <div class="mobile-enroll">
               <a class="mobile-enroll__link" href="">
-                <button class="mobile-enroll__button">Записатися</button>
+                <button class="mobile-enroll__button" data-modal-consult-open>
+                  Консультація
+                </button>
               </a>
             </div>
 
@@ -395,72 +399,87 @@
           </div>
         </div>
       </section>
-
-      <!-- Nature -->
-      <!-- <section class="nature">
-        <div class="nature__container">
-          <h2 class="nature__title">Made From Nature, For Nature</h2>
-          <p class="nature__text">
-            We craft with planet-friendly natural materials, like merino wool
-            and eucalyptus trees, because they're our best chance for a
-            sustainable future.
-          </p>
-          <button type="button" class="nature__button" data-modal-see-how-open>
-            See How
-          </button>
-        </div>
-      </section>
-      -->
     </main>
 
     <!-- Modal -->
-    <div class="backdrop backdrop-see-how is-hidden" data-modal-see-how>
-      <button
-        class="modal-seehow__button modal__button"
-        data-modal-see-how-close
-      >
-        <svg
-          class="modal-seehow__icon modal__icon"
-          width="11.11"
-          height="11.14"
-        >
-          <use href="./images/icons/mobile/mobile.svg#mobile-new"></use>
-        </svg>
-      </button>
-      <div class="modal-seehow modal">
-        <h2 class="modal-seehow__title modal__title">See how!</h2>
-        <div class="modal-seehow__zone">
-          <iframe
-            width="560"
-            height="315"
-            class="video"
-            id="video-player"
-            src="https://www.youtube.com/embed/Xd7j0mJ1OSo"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allow="fullscreen"
-            data-ready="true"
-            title="see how"
-          >
-          </iframe>
-        </div>
+    <div class="backdrop" data-modal-consult>
+      <div class="modal">
+        <form action="" class="modal-form js-speaker-form">
+          <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+          <button type="button" class="modal__button" data-modal-consult-close>
+            <svg class="modal__icon">
+              <use href="./images/icons/modal/modal.svg#close"></use>
+            </svg>
+          </button>
+          <div class="form-field">
+            <label for="name" class="form-field__label">Ім'я</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-field__input"
+            />
+            <svg class="form-field__icon" width="12" height="12">
+              <use href="./images/icons/modal/modal.svg#name"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="tel" class="form-field__label">Телефон</label>
+            <input type="tel" name="tel" id="tel" class="form-field__input" />
+            <svg class="form-field__icon" width="13" height="13">
+              <use href="./images/icons/modal/modal.svg#telef"></use>
+            </svg>
+          </div>
 
-        <script src="https://player.vimeo.com/api/player.js"></script>
+          <div class="form-field">
+            <label for="email" class="form-field__label">Пошта</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-field__input"
+            />
+            <svg class="form-field__icon" width="15" height="12">
+              <use href="./images/icons/modal/modal.svg#mail"></use>
+            </svg>
+          </div>
 
-        <p class="modal-seehow__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et
-        </p>
+          <div class="form-field form-field--comm">
+            <label for="comment" class="form-field__label">Коментар</label>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Введіть текст"
+              cols="30"
+              rows="10"
+              class="form-field__comment"
+            ></textarea>
+          </div>
+
+          <div class="form-field form-field--term">
+            <label
+              for="terms"
+              class="form-field__label form-field__label--term"
+            >
+              <input
+                type="checkbox"
+                name="terms"
+                id="terms"
+                class="form-field__checkbox"
+              />
+              <span class="form-field__icon--check"></span>
+              Погоджуюся з розсилкою та приймаю
+              <a class="form-field__link" href="">Умови договору</a>
+            </label>
+          </div>
+
+          <button type="submit" class="form-field__button">Відправити</button>
+        </form>
       </div>
     </div>
 
     <!-- Scripts -->
-    <script src="./js/modal.js"></script>
-    <script defer src="./js/mobile-menu.js"></script>
-    <script src="./js/slider.js"></script>
-    <script src="./js/mobile-dropdown.js"></script>
-    <!-- <script defer src="./src/js/light-box.js"></script>
-    <script src="./src/js/slick.js"></script> -->
+    <script defer src="./js/mobile-menu.js" type="module"></script>
+    <script defer src="./js/consultation-modal.js" type="module"></script>
   </body>
 </html>
