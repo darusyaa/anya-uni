@@ -178,11 +178,8 @@
     margin-top: 40px;
     margin-bottom: 60px;
 
-  &__link {
-  @include fontPreset(400, 24px, 30px, 00.03em)
-  }
-
   &__button {
+    @include fontPreset(400, 24px, 30px, 00.03em)
     @include transitionBack(color, border);
     @include buttonSet(
       block,

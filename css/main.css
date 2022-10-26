@@ -104,14 +104,12 @@ a {
   width: 100%;
   height: 100%;
   z-index: 100;
-  border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
   overflow-y: scroll;
   transform: translate(-50%, -50%) scale(1);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -193,7 +191,7 @@ a {
 }
 
 .modal-form {
-  font-family: PT Sans;
+  font-family: Duru;
   color: #1e1e1e;
   max-width: 100%;
   flex-direction: column;

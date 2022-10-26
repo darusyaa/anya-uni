@@ -140,9 +140,6 @@
   .header-enroll {
     display: block;
 
-    &__link {
-    }
-
     &__button {
       @include transitionBack(color, border);
       @include buttonSet(
