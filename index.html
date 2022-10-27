@@ -264,11 +264,9 @@
               >
             </li>
             <li class="hero__item">
-              <a href="./more.html" class="hero__link"
-                ><button class="hero__button hero__button-2">
-                  Дізнатися більше
-                </button></a
-              >
+              <button class="hero__button hero__button-2" data-modal-more-open>
+                Дізнатися більше
+              </button>
             </li>
           </ul>
         </div>
@@ -393,6 +391,22 @@
 
             <em class="info__important">Долучайся до здачі крові!</em>
           </div>
+        </div>
+      </section>
+
+      <!-- Чому важливо здавати кров? -->
+      <section class="for-what">
+        <div class="for-what__container">
+          <h2 class="for-what__title">Чому важливо здавати кров?</h2>
+          <p class="for-what__text">
+            За стандартами ВОЗ, Україна потребує 33 донорів на 1000 населення.
+            Ще до війни ми мали дефіцит, бо кількість донорів була втричі
+            меншою. Щоби вчасно забезпечувати кров’ю та її компонентами тих, хто
+            її потребує, у резерві мають бути два мільйони постійних донорів.
+          </p>
+          <button type="button" class="for-what__button" data-modal-more-open>
+            Детальніше
+          </button>
         </div>
       </section>
     </main>
@@ -581,8 +595,40 @@
       </div>
     </div>
 
+    <!-- Modal more -->
+    <div class="backdrop is-hidden" data-modal-more>
+      <div class="modal modal-more">
+        <button type="button" class="modal__button" data-modal-more-close>
+          <svg class="modal__icon">
+            <use href="./images/icons/modal/modal.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-more__title">Hidden</h2>
+        <picture>
+          <source
+            srcset="
+              ./images/index/more/heart.png    1x,
+              ./images/index/more/heart@2x.png 2x
+            "
+          />
+          <img
+            class="modal-more__img"
+            src="./images/index/more/heart.png"
+            alt="Heart"
+          />
+        </picture>
+        <p class="modal-more__text">
+          Донорство приносить користь не лише тим, хто потребує крові, а й тим,
+          хто її здає. Регулярна здавання крові зміцнює імунну систему людини, є
+          профілактикою серцево-судинних захворювань, тому що позбавляє надлишку
+          крові, що створює навантаження на серце.
+        </p>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script defer src="./js/mobile-menu.js"></script>
-    <script defer src="./js/consultation-modal.js"></script>
+    <script defer src="./js/consultation-modal.js" type="module"></script>
+    <script defer src="./js/more-modal.js" type="module"></script>
   </body>
 </html>

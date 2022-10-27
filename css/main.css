@@ -7,7 +7,7 @@
   border-width: 0;
 }
 
-.catalog__title, .whats-happening__hidden {
+.catalog__title, .modal-more__title, .whats-happening__hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1272,6 +1272,96 @@ a {
     left: 32%;
   }
 }
+.for-what {
+  color: #808080;
+}
+.for-what__container {
+  padding: 0 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .for-what__container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .for-what__container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .for-what__container {
+    width: 1200px;
+  }
+}
+.for-what__title {
+  font-weight: 500px;
+  font-size: 24px;
+  line-height: 1.0416666667;
+  letter-spacing: 0.03em;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+.for-what__text {
+  font-weight: 400px;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+}
+.for-what__button {
+  display: inline-block;
+  align-items: center;
+  padding: 10px 32px;
+  min-width: 220px;
+  min-height: 50px;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ee1c1f;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #ee1c1f;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+.for-what__button:focus, .for-what__button:hover {
+  background-color: #ee1c1f;
+  color: #ffffff;
+}
+
+.modal-more__img {
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .modal-more__img {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-more__img {
+    width: 400px;
+  }
+}
+.modal-more__text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.1363636364;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #1e1e1e;
+  margin-top: 30px;
+}
+
 .burger__btn {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
