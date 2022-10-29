@@ -1807,6 +1807,24 @@ a {
   border: 2px solid #ee1c1f;
 }
 
+@media screen and (min-width: 420px) {
+  .registration-right__box {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+@media screen and (min-width: 550px) {
+  .registration-right__box {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+@media screen and (min-width: 760px) {
+  .registration-right__box {
+    padding-right: 25%;
+    padding-left: 25%;
+  }
+}
 @media screen and (min-width: 1000px) {
   .registration__container {
     display: flex;
