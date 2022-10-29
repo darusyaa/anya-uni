@@ -1,0 +1,83 @@
+.table {
+  color: black;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  background-color: $white-color;
+
+  &__section {
+    display: flex;
+    justify-content: center;
+
+    background-color: #c9cfd6;
+  }
+
+  &__title {
+    @extend %hidden;
+  }
+
+  &__caption {
+    @include fontPreset(700, 22px, 22px, 0.03em);
+    padding-bottom: 15px;
+
+    &-span {
+      color: $accent-color;
+    }
+  }
+
+  &__row {
+    @include fontPreset(400, 16px, 17px, 0.03em);
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    text-align: center;
+  }
+
+  &__cell-title {
+    &-main {
+      max-width: 55px;
+      font-weight: 600;
+    }
+
+    font-weight: 400;
+    padding: 3px 4px;
+    min-width: 30px;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &__cell-text {
+    padding: 3px 4px;
+    min-width: 30px;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    &-empty {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+@media screen and(min-width:630px) {
+  .table {
+    &__caption {
+      @include fontPreset(700, 24px, 26px, 0.03em);
+    }
+
+    &__cell-title {
+      &-main {
+        max-width: 80px;
+      }
+
+      padding: 7px 10px;
+      min-width: 65px;
+    }
+  }
+}
