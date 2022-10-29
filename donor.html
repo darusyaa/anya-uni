@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloodUA</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Roboto:wght@400;500;700;900&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://use.typekit.net/mno6hzu.css" />
+
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-donor" id="header">
+      <div class="container-donor">hidden</div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="registration">
+        <div class="registration__container">
+          <div class="registration-left">
+            <a
+              href="./index.html"
+              class="registration-left__logo site-nav__logo"
+              >oo</a
+            >
+            <div class="registration-left__box registration__box">
+              <img
+                class="registration-left__img"
+                src="./images/donor/transport.svg"
+                alt="A car - donor"
+              />
+              <ul class="registration-left__list">
+                <li class="registration-left__item">
+                  <span class="registration-left__span">Календар донацій</span>
+                  Додавай попередні донації та плануй нові.
+                </li>
+
+                <li class="registration-left__item">
+                  <span class="registration-left__span">Запаси крові</span>
+                  Дізнавайся про актуальні запаси і плануй донації саме там, де
+                  необхідно.
+                </li>
+
+                <li class="registration-left__item">
+                  <span class="registration-left__span">Бонуси та акції</span>
+                  Скористайся партнерськими акціями та бери участь у
+                  ініціативах.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="registration-right">
+            <div class="registration-right__box registration__box">
+              <div class="registration-right__top">
+                <h1 class="registration-right__title">Реєстрація</h1>
+                <p class="registration-right__text">
+                  Вже є акаунт? 
+                  <a class="registration-right__link" href="">Увійти</a>
+                </p>
+                <span class="registration-right__span">aбо</span>
+              </div>
+              <form class="registration-form">
+                <div class="registration-form__field">
+                  <label for="surname" class="registration-form__label"
+                    >Прізвище</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    id="surname"
+                    class="registration-form__input"
+                  />
+                </div>
+
+                <div class="registration-form__field">
+                  <label for="name" class="registration-form__label"
+                    >Ім`я</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="registration-form__input"
+                  />
+                </div>
+
+                <div class="registration-form__field">
+                  <label for="tel" class="registration-form__label"
+                    >Телефон</label
+                  >
+                  <input
+                    type="tel"
+                    name="tel"
+                    id="tel"
+                    class="registration-form__input"
+                  />
+                </div>
+
+                <div class="registration-form__field">
+                  <label for="email" class="registration-form__label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="registration-form__input"
+                  />
+                </div>
+
+                <div class="registration-form__field">
+                  <label class="registration-form__label" for="userPassword"
+                    >Пароль</label
+                  >
+                  <input
+                    type="password"
+                    class="registration-form__input"
+                    id="userPassword"
+                    name="password"
+                  />
+                </div>
+
+                <div class="registration-form__field">
+                  <label class="registration-form__label" for="repeatPassword"
+                    >Повторіть пароль</label
+                  >
+                  <input
+                    type="password"
+                    class="registration-form__input"
+                    id="repeatPassword"
+                    name="password"
+                  />
+                </div>
+
+                <p class="registration-form__text">
+                  Натиснувши кнопку "Зареєструватися" даю згоду на обробку
+                  персональних даних (відповідно до Закону України "Про захист
+                  персональних даних" від 1 червня 2010 року, №2297-УІ) та
+                  підтверджую, що ознайомився(лась) з протипоказаннями щодо
+                  донорства та є/хочу стати добровільним безоплатним донором
+                  крові та її компонентів.
+                </p>
+
+                <button type="submit" class="registration-form__button">
+                  Зареєструватися
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-donor">
+      <div class="container-donor">hidden</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="./js/mobile-menu.js"></script>
+  </body>
+</html>
