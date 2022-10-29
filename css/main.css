@@ -1697,10 +1697,11 @@ a {
 }
 
 .registration {
-  padding: 30px 30px;
+  padding: 30px;
 }
 
 .registration-left__logo {
+  padding: 15px;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -1826,13 +1827,96 @@ a {
   }
 }
 @media screen and (min-width: 1000px) {
+  .registration {
+    padding: 0;
+  }
   .registration__container {
     display: flex;
+    flex-wrap: wrap;
   }
-  .registration-left__logo {
-    margin-bottom: 0;
+  .registration .registration-left {
+    background-color: #f4f4f4;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
   }
-  .registration-left__box {
+  .registration .registration-left__logo {
     display: block;
+    text-align: left;
+  }
+  .registration .registration-left__box {
+    max-width: 368px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30% auto;
+  }
+  .registration .registration-left__img {
+    margin-bottom: 30px;
+  }
+  .registration .registration-left__item {
+    position: relative;
+    color: #677788;
+    padding-left: 40px;
+  }
+  .registration .registration-left__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .registration .registration-left__item::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background-size: 28px 28px;
+    margin-top: 0;
+    background-image: url(../../../images/donor/tick.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .registration .registration-left__span {
+    display: block;
+    font-weight: 600;
+    padding-bottom: 9px;
+  }
+  .registration .registration-right {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .registration .registration-right__box {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+  .registration .registration-right__title {
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+  .registration .registration-right__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+  .registration .registration-right__span {
+    margin-bottom: 24px;
+  }
+  .registration .registration-form__field {
+    margin-bottom: 15px;
+  }
+  .registration .registration-form__label {
+    font-size: 16px;
+  }
+  .registration .registration-form__label:not(:last-child) {
+    margin-bottom: 6px;
+  }
+  .registration .registration-form__text {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */

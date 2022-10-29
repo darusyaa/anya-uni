@@ -7,11 +7,12 @@
 }
 
 .registration {
-  padding: 30px 30px;
+  padding: 30px;
 }
 
 .registration-left {
   &__logo {
+    padding: 15px;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -23,9 +24,6 @@
 }
 
 .registration-right {
-  &__box {
-  }
-
   &__title {
     @include fontPreset(900, 28px, 29px, 0.02em);
     color: black;
@@ -151,33 +149,130 @@
 }
 
 @media screen and(min-width: 550px) {
-    .registration-right__box {
-        padding-right: calc(30% * 0.5);
-        padding-left: calc(30% * 0.5);
-    }
+  .registration-right__box {
+    padding-right: calc(30% * 0.5);
+    padding-left: calc(30% * 0.5);
+  }
 }
 
 @media screen and(min-width: 760px) {
-    .registration-right__box {
-        padding-right: calc(50% * 0.5);
-        padding-left: calc(50% * 0.5);
-    }
+  .registration-right__box {
+    padding-right: calc(50% * 0.5);
+    padding-left: calc(50% * 0.5);
+  }
 }
 
 @media screen and(min-width: 1000px) {
   .registration {
+    padding: 0;
+
     &__container {
       display: flex;
-    }
-  }
-
-  .registration-left {
-    &__logo {
-      margin-bottom: 0;
+      flex-wrap: wrap;
     }
 
-    &__box {
-      display: block;
+    .registration-left {
+      background-color: #f4f4f4;
+
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+      //   display: flex;
+
+      &__logo {
+        display: block;
+        text-align: left;
+      }
+
+      &__box {
+        max-width: 368px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin: 30% auto;
+      }
+
+      &__img {
+        margin-bottom: 30px;
+      }
+
+      &__item {
+        position: relative;
+        color: #677788;
+        padding-left: 40px;
+
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+
+        &::before {
+          content: "";
+
+          width: 28px;
+          height: 28px;
+          background-size: 28px 28px;
+          margin-top: 0;
+          background-image: url(../../../images/donor/tick.svg);
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-repeat: no-repeat;
+          background-position: right center;
+        }
+      }
+
+      &__span {
+        display: block;
+        font-weight: 600;
+        padding-bottom: 9px;
+      }
+    }
+
+    .registration-right {
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+
+      padding-top: 40px;
+
+      &__box {
+        padding-right: 15%;
+        padding-left: 15%;
+      }
+
+      &__title {
+        @include fontPreset(900, 34px, 34px, 0.02em);
+        margin-bottom: 20px;
+      }
+
+      &__text {
+        @include fontPreset(400, 16px, 19px, 0.02em);
+        margin-bottom: 30px;
+      }
+
+      &__span {
+        margin-bottom: 24px;
+      }
+    }
+
+    .registration-form {
+      &__field {
+        margin-bottom: 15px;
+      }
+
+      &__label {
+        font-size: 16px;
+
+        &:not(:last-child) {
+          margin-bottom: 6px;
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+      }
     }
   }
 }
