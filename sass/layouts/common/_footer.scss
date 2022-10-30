@@ -125,9 +125,7 @@
 }
 
 .footer-search {
-
   padding-top: 30px;
-  
 
   &__form {
     position: relative;
@@ -140,7 +138,7 @@
     height: 42px;
 
     background: $white-color;
-    color: #9E9C9C;
+    color: #9e9c9c;
 
     padding-left: 10px;
 
@@ -150,7 +148,7 @@
     &:focus {
       outline: none;
       border-color: #2f303a;
-  }
+    }
   }
 
   &__button {
@@ -176,6 +174,26 @@
 
 .footer-search__input:focus ~ .footer-search__button {
   background-color: #2f303a;
+}
+
+.footer-me {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  &__link {
+    @include transitionBack(color, border);
+    color: #2f303a;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #2f303a;
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+      border: 2px solid $accent-color;
+    }
+  }
 }
 
 @media screen and(min-width: 768px) {
