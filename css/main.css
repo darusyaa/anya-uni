@@ -340,6 +340,9 @@ a {
   border-bottom: 1px solid #ececec;
   height: 60px;
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
 }
 .header-container {
   display: flex;
@@ -1095,7 +1098,7 @@ a {
     font-size: 34px;
     line-height: 1.0588235294;
     letter-spacing: 0.05em;
-    top: 879px;
+    top: 815px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1104,7 +1107,7 @@ a {
     font-size: 38px;
     line-height: 1.0526315789;
     letter-spacing: 0.05em;
-    top: 1072px;
+    top: 990px;
   }
 }
 

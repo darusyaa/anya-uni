@@ -4,6 +4,9 @@
 
   height: 60px;
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
 
   &-container {
     @include centeredFlex($justify: space-between);

@@ -47,12 +47,12 @@
 
     @media screen and(min-width: 768px) {
       @include fontPreset(700, 34px, 36px, 0.05em);
-      top: 879px;
+      top: 815px;
     }
 
     @media screen and(min-width: 1200px) {
       @include fontPreset(700, 38px, 40px, 0.05em);
-      top: 1072px;
+      top: 990px;
     }
   }
 }

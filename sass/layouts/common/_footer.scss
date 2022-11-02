@@ -18,6 +18,53 @@
   }
 }
 
+.footer-join {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $hero-bg-color;
+
+  margin-bottom: 60px;
+
+  &__title {
+    display: none;
+
+    @include fontPreset(700, 14px, 16px, 00.03em);
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__link {
+    @extend %social-link;
+    @include transitionBack(background-color, fill);
+
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      //   color: $footer-bg;
+      fill: $footer-bg;
+      background-color: $accent-color;
+    }
+  }
+
+  &__icon {
+    @extend %social-icon;
+
+    fill: inherit;
+  }
+}
+
 .footer-contact {
   &__title {
     @include fontPreset(700, 14px, 16px, 00.03em);
