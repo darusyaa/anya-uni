@@ -1,13 +1,12 @@
-.header-donor {
-  display: none;
-}
-
 .footer-donor {
   display: none;
 }
-
 .registration {
   padding: 30px;
+
+  // &__container {
+  //   margin-top: 100px;
+  // }
 }
 
 .registration-left {
@@ -24,6 +23,9 @@
 }
 
 .registration-right {
+  &__box {
+    margin-top: 80px;
+  }
   &__title {
     @include fontPreset(900, 28px, 29px, 0.02em);
     color: black;
