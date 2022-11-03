@@ -394,13 +394,14 @@ a {
     letter-spacing: 0.03em;
   }
 }
-.site-nav__logo::before {
-  content: "Bl";
+.site-nav__logo span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.03em;
   color: black;
-}
-.site-nav__logo::after {
-  content: "d";
-  color: black;
+  display: flex;
+  margin-top: 5px;
 }
 .site-nav__list {
   display: none;
@@ -469,18 +470,6 @@ a {
   }
 }
 @media screen and (min-width: 1200px) {
-  .site-nav__logo::before {
-    content: "Bl";
-    color: black;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .site-nav__logo::after {
-    content: "d";
-    color: black;
-  }
-}
-@media screen and (min-width: 1200px) {
   .site-nav__list {
     display: flex;
   }
@@ -492,7 +481,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .site-nav__link {
-    font-weight: 500;
+    font-weight: 900;
     font-size: 14px;
     line-height: 1.1428571429;
     letter-spacing: 0.02em;
@@ -575,6 +564,7 @@ a {
     display: flex;
   }
   .header-contact__link {
+    color: #808080;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1428571429;
@@ -583,7 +573,6 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: black;
   }
   .header-contact__link:hover, .header-contact__link:focus {
     color: #ee1c1f;
@@ -1822,10 +1811,6 @@ a {
   }
 }
 
-.header-donor {
-  display: none;
-}
-
 .footer-donor {
   display: none;
 }
@@ -1844,6 +1829,9 @@ a {
   display: none;
 }
 
+.registration-right__box {
+  margin-top: 80px;
+}
 .registration-right__title {
   font-weight: 900;
   font-size: 28px;

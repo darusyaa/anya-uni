@@ -24,8 +24,223 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header-donor" id="header">
-      <div class="container-donor">hidden</div>
+    <header class="header" id="header">
+      <div class="header-container">
+        <!-- Site-nav -->
+        <nav class="site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a
+                href="./index.html"
+                class="site-nav__link site-nav__link--current"
+                >Головна</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <!-- <a href="./catalog.html" class="site-nav__link">Catalog</a> -->
+              <div class="dropdown">
+                <button class="dropdown__button site-nav__link">
+                  Cтати:
+                  <svg class="dropdown__icon" width="20" height="20">
+                    <use
+                      href="./images/icons/header/scroll.svg#scroll-down"
+                    ></use>
+                  </svg>
+                </button>
+                <div class="dropdown__content">
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="./donor.html">Донором</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a class="dropdown__link" href="./catalog-shoes.html"
+                        >Волонтером</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Спеціалісти</a>
+            </li>
+          </ul>
+          <a href="./index.html" class="site-nav__logo"
+            >Кров <span>станція здачі</span></a
+          >
+        </nav>
+
+        <!-- Contact -->
+        <div class="contact">
+          <ul class="header-contact__list">
+            <li class="header-contact__item">
+              <a
+                href=""
+                class="header-contact__link header-contact__link-address"
+              >
+                Харків, вулиця Сумська 17а
+              </a>
+            </li>
+            <li class="header-contact__item">
+              <a href="tel:+380960009999" class="header-contact__link">
+                <svg class="header-contact__icon" width="10" height="16">
+                  <use href="./images/icons/header/header.svg#tel"></use>
+                </svg>
+                +380 96 000 9999
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile-button -->
+        <button
+          type="button"
+          class="burger__btn burger__btn--opened js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu-container"
+        >
+          <svg
+            class="burger__icon burger__icon--opened"
+            aria-label="Перемикач мобільного меню"
+          >
+            <use
+              class="burger__use burger__use--opened"
+              href="./images/icons/mobile/mobile.svg#menu-40px"
+            ></use>
+          </svg>
+        </button>
+
+        <!-- Header-enroll -->
+        <div class="header-enroll">
+          <button class="header-enroll__button" data-modal-consult-open>
+            Консультація
+          </button>
+        </div>
+
+        <!-- Mobile-menu -->
+        <div class="mobile-menu js-menu-container">
+          <div class="menu-container" id="mobile-menu-container">
+            <button
+              type="button"
+              class="burger__btn burger__btn--closed is-close js-close-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu-container"
+            >
+              <svg class="burger__icon" aria-label="Перемикач мобільного меню">
+                <use
+                  class="burger__use burger__use--crossed"
+                  href="./images/icons/mobile/mobile.svg#close-40px"
+                ></use>
+              </svg>
+            </button>
+
+            <!-- Mobile-nav -->
+            <a href="./index.html" class="site-nav__logo mobile-nav__logo"
+              >oo</a
+            >
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a
+                  href="./index.html"
+                  class="mobile-nav__link mobile-nav__link--current"
+                  >Головна</a
+                >
+              </li>
+              <li class="mobile-nav__item dropdown-item">
+                <div class="dropdown-mobile">
+                  <button
+                    class="dropdown-mobile__button mobile-nav__link dropdown-btn"
+                  >
+                    Стати:
+                    <svg class="dropdown-mobile__icon" width="20" height="20">
+                      <use
+                        href="./images/icons/header/scroll.svg#scroll-down"
+                      ></use>
+                    </svg>
+                  </button>
+                  <div class="dropdown-mobile__content">
+                    <ul class="dropdown-mobile__list">
+                      <li class="dropdown-mobile__item">
+                        <a class="dropdown-mobile__link" href="./donor.html"
+                          >Донором</a
+                        >
+                      </li>
+                      <li class="dropdown-mobile__item">
+                        <a
+                          class="dropdown-mobile__link"
+                          href="./catalog-shoes.html"
+                          >Волонтером</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="mobile-nav__item mobile-nav__item-contacts">
+                <a href="" class="mobile-nav__link">Спеціалісти</a>
+              </li>
+            </ul>
+
+            <!-- mobile-enroll -->
+            <div class="mobile-enroll">
+              <button class="mobile-enroll__button" data-modal-consult-open>
+                Консультація
+              </button>
+            </div>
+
+            <!-- Mobile-contact -->
+            <ul class="mobile-contact__list">
+              <li class="mobile-contact__item">
+                <a href="tel:+380960009999" class="mobile-contact__link">
+                  +380 96 000 9999
+                </a>
+              </li>
+              <li class="mobile-contact__item">
+                <a
+                  href=""
+                  class="mobile-contact__link mobile-contact__link-address"
+                >
+                  Харків, вулиця Сумська 17а
+                </a>
+              </li>
+            </ul>
+
+            <!-- Mobile-socials -->
+            <ul class="mobile-socials">
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="https://www.instagram.com/"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="https://www.twitter.com/">
+                  Twitter
+                </a>
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="https://www.facebook.com/"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li class="mobile-socials__item">
+                <a
+                  class="mobile-socials__link"
+                  href="https://www.linkedin.com/"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Main -->
@@ -33,13 +248,8 @@
       <section class="registration">
         <div class="registration__container">
           <div class="registration-left">
-            <a
-              href="./index.html"
-              class="registration-left__logo site-nav__logo"
-              >oo</a
-            >
             <div class="registration-left__box registration__box">
-              <img 
+              <img
                 class="registration-left__img"
                 src="./images/donor/transport.svg"
                 alt="A car - donor"
@@ -70,7 +280,7 @@
               <div class="registration-right__top">
                 <h1 class="registration-right__title">Реєстрація</h1>
                 <p class="registration-right__text">
-                  Вже є акаунт? 
+                  Вже є акаунт?
                   <a class="registration-right__link" href="">Увійти</a>
                 </p>
                 <span class="registration-right__span">aбо</span>
