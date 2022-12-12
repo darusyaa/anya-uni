@@ -1878,6 +1878,10 @@ a {
   position: relative;
   width: 100%;
 }
+.registration-form__field-sex {
+  gap: 10px;
+  align-items: baseline;
+}
 .registration-form__label {
   font-weight: 400;
   font-size: 14px;
@@ -1899,6 +1903,11 @@ a {
 .registration-form__input:focus {
   outline: none;
   border-color: #ee1c1f;
+}
+.registration-form__input-sex {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
 }
 .registration-form__text {
   font-weight: 400;
@@ -1928,6 +1937,17 @@ a {
   background-color: #ffffff;
   color: #ee1c1f;
   border: 2px solid #ee1c1f;
+}
+.registration-form__sex {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #2f303a;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
 }
 
 @media screen and (min-width: 420px) {
@@ -2041,4 +2061,11 @@ a {
   .registration .registration-form__text {
     font-size: 16px;
   }
+}
+span {
+  color: red;
+}
+
+.error {
+  border-color: #ee1c1f;
 }/*# sourceMappingURL=main.css.map */
